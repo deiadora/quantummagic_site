@@ -114,11 +114,12 @@ hero note:  the tech has caught up · the keys are ready
 ---
  
 ### part of the deiadora ecosystem
- 
+
 → [deiadora.com](https://deiadora.com) · node 0 · the field
 → [drblexchange.com](https://drblexchange.com) · node 2 · recognition
-→ [quantummagic.com](https://quantummagic.ai) · node 3 · discernment
+→ [quantummagic.ai](https://quantummagic.ai) · node 3 · discernment
 → [iamdeiadora.com](https://iamdeiadora.com) · node 4 · wave
+→ [deiadorebel.com](https://deiadorebel.com) · node 6 · transmission
 → [techtuition.ai](https://techtuition.ai) · node 7 · expression
 → [thequantumceo.com](https://thequantumceo.com) · node 8 · structure
  
