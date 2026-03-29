@@ -1,6 +1,6 @@
 # quantum magic · discernment · tetrahedron
  
-> *The vision is clear. The team is not yet assembled.*
+> *The vision is clear and the team is ready to assemble.*
  
 **node 3 · pollen gold · #c49a3c**
  
@@ -46,7 +46,7 @@ The research foundation is *Quantum Currency: Field Research on Human Coherence*
  
 Two doors:
  
-**Email:** hello@deiadora.com · subject: quantum magic · i want to help build this
+**Email:** hello@quantummagic.ai · subject: quantum magic · i want to help build this
  
 **Discord:** [DRBL Exchange](https://discord.gg/XcMyyEug) · post in #connect · say what you build · let the vesica piscis do its work
  
@@ -116,4 +116,4 @@ hero note:  the tech has caught up · the keys are ready
 → [thequantumceo.com](https://thequantumceo.com) · 8 · structure · octagon
 → [deiadora.live](https://deiadora.live) · 9 · source · nonagon
  
-*the tech has caught up · the keys are ready · the team is the question*
+*the tech has caught up · the keys are ready · the team is gathering*
