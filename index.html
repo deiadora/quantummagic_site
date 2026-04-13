@@ -55,10 +55,10 @@
       --line:       rgba(240,237,230,.1);
     }
 
-    [data-theme="dark"] .nav        { background: #010003; }
-    [data-theme="dark"] .card       { background: #151515; }
+    [data-theme="dark"] .nav         { background: #010003; }
+    [data-theme="dark"] .card        { background: #151515; }
     [data-theme="dark"] .pillar-card { background: #151515; }
-    [data-theme="dark"] .join-card  { background: #151515; }
+    [data-theme="dark"] .join-card   { background: #151515; }
 
     [data-theme="light"] {
       --ink:        #1a1814;
@@ -72,15 +72,15 @@
       --line:       rgba(26,24,20,.12);
     }
 
-    [data-theme="light"] .nav        { background: #f4f2ec; }
-    [data-theme="light"] .card       { background: #fffff2; }
+    [data-theme="light"] .nav         { background: #f4f2ec; }
+    [data-theme="light"] .card        { background: #fffff2; }
     [data-theme="light"] .pillar-card { background: #fffff2; }
-    [data-theme="light"] .join-card  { background: #fffff2; }
-    [data-theme="light"] .brand      { color: #1a1814; }
+    [data-theme="light"] .join-card   { background: #fffff2; }
+    [data-theme="light"] .brand       { color: #1a1814; }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; font-size: 16px; }
-    body { font-family: var(--sans); background: var(--paper); color: var(--ink); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    body { font-family: var(--sans); background: var(--paper); color: var(--ink); line-height: 1.6; -webkit-font-smoothing: antialiased; transition: background .25s, color .25s; }
 
     /* ─── nav ─── */
     .nav {
@@ -389,7 +389,7 @@
       <a href="#vision">vision</a>
       <a href="#pillars">pillars</a>
       <a href="#join" class="pill">join the build</a>
-      <button class="theme-toggle" id="themeToggle" aria-label="toggle theme">🌙</button>
+      <button class="theme-toggle" id="themeToggle" aria-label="toggle colour mode">🌙</button>
     </nav>
   </header>
 
@@ -457,7 +457,7 @@
       </div>
     </section>
 
-    <!-- ─── pillars ─── */
+    <!-- ─── pillars ─── -->
     <section id="pillars">
       <p class="section-label">three scales · one architecture</p>
       <div class="pillars-grid">
@@ -522,17 +522,48 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
-    const toggle = document.getElementById("themeToggle");
-    const saved = localStorage.getItem("theme-quantummagic") || "dark";
-    document.documentElement.setAttribute("data-theme", saved);
-    toggle.textContent = saved === "dark" ? "🌙" : "☀️";
 
+    const toggle  = document.getElementById("themeToggle");
+    const root    = document.documentElement;
+    const STORE   = "qc-theme"; // shared key across all ecosystem sites
+
+    // Detect system preference
+    const sysDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+    function resolveTheme() {
+      const saved = localStorage.getItem(STORE);
+      if (saved) return saved;                     // explicit user override
+      return sysDark.matches ? "dark" : "light";   // follow system
+    }
+
+    function applyTheme(theme) {
+      root.setAttribute("data-theme", theme);
+      toggle.textContent = theme === "dark" ? "🌙" : "☀️";
+      toggle.setAttribute("aria-label", theme === "dark" ? "switch to light mode" : "switch to dark mode");
+    }
+
+    // Initial paint
+    applyTheme(resolveTheme());
+
+    // Toggle click — cycle: override opposite → clear override (return to system)
     toggle.addEventListener("click", () => {
-      const current = document.documentElement.getAttribute("data-theme");
+      const current = root.getAttribute("data-theme");
+      const sysTheme = sysDark.matches ? "dark" : "light";
       const next = current === "dark" ? "light" : "dark";
-      document.documentElement.setAttribute("data-theme", next);
-      localStorage.setItem("theme-quantummagic", next);
-      toggle.textContent = next === "dark" ? "🌙" : "☀️";
+
+      if (next === sysTheme) {
+        localStorage.removeItem(STORE);
+      } else {
+        localStorage.setItem(STORE, next);
+      }
+      applyTheme(next);
+    });
+
+    // Follow OS schedule changes if no manual override is set
+    sysDark.addEventListener("change", () => {
+      if (!localStorage.getItem(STORE)) {
+        applyTheme(sysDark.matches ? "dark" : "light");
+      }
     });
   </script>
 </body>
