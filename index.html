@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>quantum magic — a call for collaborators</title>
-  <meta name="description" content="A live inner architecture exploration map to guide you daily — to create depth and breath and remember your own nature. Looking for badasses who get it." />
-  <meta property="og:title" content="quantum magic — a call for collaborators" />
-  <meta property="og:description" content="The vision is clear. The team is ready to assemble. If this is for you — you'll know." />
+  <title>quantum magic — your inner architecture, made legible</title>
+  <meta name="description" content="A cognitive architecture for AI systems and a daily companion for humans. 264 transmutational arcs. 880 relational protocols. The emotional intelligence layer any system needs." />
+  <meta property="og:title" content="quantum magic" />
+  <meta property="og:description" content="AI models need a relational layer to work properly and safely, no matter the system. This is that layer." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://quantummagic.ai" />
   <meta property="og:image" content="https://quantummagic.ai/quantummagic_banner_sm.jpeg" />
   <link rel="icon" href="/quantummagic_favicon.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet" />
   <style>
     :root {
       --ink:        #ebe7dc;
@@ -33,7 +33,7 @@
       --node-8:     #3c3489;
       --node-9:     #2d1a4e;
 
-      --accent:     #c49a3c;  /* node-3 · discernment · tetrahedron · pollen */
+      --accent:     #c49a3c;
       --accent-lt:  #e6b84a;
 
       --muted:      #cbc6ba;
@@ -41,6 +41,7 @@
       --r:          8px;
       --serif:      'Exo 2', system-ui, sans-serif;
       --sans:       'DM Sans', system-ui, sans-serif;
+      --display:    'Cormorant Garamond', Georgia, serif;
     }
 
     [data-theme="dark"] {
@@ -58,7 +59,7 @@
     [data-theme="dark"] .nav         { background: #010003; }
     [data-theme="dark"] .card        { background: #151515; }
     [data-theme="dark"] .pillar-card { background: #151515; }
-    [data-theme="dark"] .join-card   { background: #151515; }
+    [data-theme="dark"] .access-card { background: #151515; }
 
     [data-theme="light"] {
       --ink:        #1a1814;
@@ -75,7 +76,7 @@
     [data-theme="light"] .nav         { background: #f4f2ec; }
     [data-theme="light"] .card        { background: #fffff2; }
     [data-theme="light"] .pillar-card { background: #fffff2; }
-    [data-theme="light"] .join-card   { background: #fffff2; }
+    [data-theme="light"] .access-card { background: #fffff2; }
     [data-theme="light"] .brand       { color: #1a1814; }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -165,11 +166,11 @@
     }
 
     .hero h1 {
-      font-family: var(--serif);
-      font-size: clamp(2.2rem, 5vw, 3.4rem);
-      line-height: 1.12;
-      letter-spacing: -.03em;
-      font-weight: 700;
+      font-family: var(--display);
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      line-height: 1.1;
+      letter-spacing: -.02em;
+      font-weight: 400;
       color: var(--ink);
       max-width: 700px;
       margin-bottom: 1.4rem;
@@ -177,7 +178,7 @@
 
     .hero h1 em {
       font-style: italic;
-      font-weight: 300;
+      font-weight: 400;
       color: var(--accent);
     }
 
@@ -243,9 +244,9 @@
     }
 
     .card h2 {
-      font-family: var(--serif);
-      font-size: 1.4rem;
-      font-weight: 600;
+      font-family: var(--display);
+      font-size: 1.8rem;
+      font-weight: 400;
       letter-spacing: -.02em;
       margin-bottom: 1rem;
       color: var(--ink);
@@ -259,6 +260,18 @@
     }
 
     .card p:last-child { margin-bottom: 0; }
+
+    .card .thesis {
+      font-family: var(--display);
+      font-size: 1.2rem;
+      font-style: italic;
+      font-weight: 400;
+      color: var(--ink);
+      line-height: 1.6;
+      border-left: 2px solid var(--accent);
+      padding-left: 1.2rem;
+      margin: 1.4rem 0;
+    }
 
     /* ─── pillars grid ─── */
     .pillars-grid {
@@ -319,16 +332,16 @@
       line-height: 1.65;
     }
 
-    /* ─── join cards ─── */
-    .join-grid {
+    /* ─── access cards ─── */
+    .access-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1.2rem;
     }
 
-    @media (max-width: 560px) { .join-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 560px) { .access-grid { grid-template-columns: 1fr; } }
 
-    .join-card {
+    .access-card {
       background: var(--card);
       border: 1px solid var(--accent);
       border-radius: var(--r);
@@ -338,19 +351,36 @@
       gap: .8rem;
     }
 
-    .join-card h3 {
+    .access-card .access-label {
       font-family: var(--serif);
-      font-size: 1.1rem;
+      font-size: .7rem;
       font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .access-card h3 {
+      font-family: var(--display);
+      font-size: 1.4rem;
+      font-weight: 400;
+      font-style: italic;
       color: var(--ink);
       letter-spacing: -.01em;
     }
 
-    .join-card p {
+    .access-card p {
       font-size: .9rem;
       color: var(--muted);
       line-height: 1.7;
       flex: 1;
+    }
+
+    .access-card .btn-row {
+      display: flex;
+      gap: .8rem;
+      flex-wrap: wrap;
+      margin-top: .4rem;
     }
 
     /* ─── footer ─── */
@@ -387,9 +417,9 @@
     <a class="brand" href="/">quantum<span>magic</span></a>
     <nav class="navlinks">
       <a href="#vision">vision</a>
-      <a href="#pillars">pillars</a>
-      <a href="#join" class="pill">join the build</a>
-      <button class="theme-toggle" id="themeToggle" aria-label="toggle colour mode">🌙</button>
+      <a href="#pillars">the system</a>
+      <a href="#access" class="pill">get access</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="toggle colour mode">🌗</button>
     </nav>
   </header>
 
@@ -397,62 +427,71 @@
 
     <!-- ─── hero ─── -->
     <section class="hero">
-      <p class="kicker">quantum magic · a live inner architecture exploration map · looking for collaborators</p>
-      <h1>The vision is clear and the team is <em>ready to assemble.</em></h1>
+      <p class="kicker">quantum magic · emotional intelligence layer · individual · team · collective · machine</p>
+      <h1>Your inner architecture, <em>made legible.</em></h1>
       <p class="subhead">
-        A live inner architecture exploration map to guide you daily —
-        <strong>to create depth and breath and remember your own nature.</strong>
-        Built on 264 transmutational arcs, thirteen years of field research,
-        and the principle that everyone already carries the architecture.
+        What you feel as insight, a system experiences as structured input.
+        <strong>Quantum Magic is the layer in between.</strong>
       </p>
       <p class="subhead">
-        The individual version first. Then tribe. Then collective.
-        The same fractal framework at every scale.
-        If this is for you — you'll know.
+        A daily inner architecture companion for humans.
+        A cognitive intelligence layer for AI systems.
+        Built on 264 transmutational arcs and 880 relational protocols —
+        thirteen years of field research made operational.
       </p>
       <div class="ctaRow">
-        <a class="btn primary" href="#join">join the build</a>
+        <a class="btn primary" href="#access">get access</a>
         <a class="btn ghost" href="#vision">read the vision</a>
       </div>
-      <p class="hero-note">the tech has caught up · the keys are ready · the team is ready to assemble</p>
+      <p class="hero-note">individual app coming soon · API available · minidapp on Minima</p>
     </section>
 
     <!-- ─── vision ─── -->
     <section id="vision">
       <p class="section-label">the vision</p>
       <div class="card">
-        <h2>What if your phone knew what you were actually feeling — and helped you move through it?</h2>
+        <h2>An emotional intelligence layer for any system that touches humans.</h2>
         <p>
-          Quantum Magic is a live inner architecture exploration map.
-          Not a mood tracker. Not a meditation app. Not another wellness tool
-          that flattens what it touches.
-          A precise, research-grounded, daily companion that meets you
-          exactly where you are in the emotional wave — and maps the arc
-          from source code to transmutation.
+          Quantum Magic is not a wellness app. It is a cognitive architecture —
+          a structured intelligence layer built on 264 transmutational arcs
+          (the emotional system) and 880 relational protocols (the AI-facing layer) —
+          designed to map human intelligence into an information architecture
+          that scales: individual, team, collective, and beyond.
         </p>
         <p>
-          The 264 quantum keys are the engine. Each one is a three-beat arc:
-          source state → meta-awareness → transmutation. Thirteen years of
-          field research documented in
-          <em>Quantum Currency: Field Research on Human Coherence</em>.
-          Tested across four years of Fortune 500 workshops.
-          The first 13 are open source at
+          The 264 keys are the hidden system layer — the emotional intelligence
+          engine that users experience but never see exposed. The 880 relational
+          protocols govern how the system interacts across environments.
+          Together they form what may be the first structured cognitive framework
+          designed to operate coherently at human, team, organisational,
+          and machine scale.
+        </p>
+
+        <p class="thesis">
+          AI models need a relational layer to work properly and safely,
+          no matter the system. This is that layer.
+        </p>
+
+        <p>
+          The long-arc vision is robotic AI. The Field Research series said
+          human-AI collaboration was coming and that we needed to be prepared
+          for it — not as a prediction, but as a field note. Quantum Magic is
+          the preparation made operational: a staged cognitive environment
+          with controlled depth exposure, re-introduced safely across
+          multiple environments.
+        </p>
+        <p>
+          The individual app comes first — not because it's the smallest ambition,
+          but because it's the correct entry point for a high-depth system.
+          Individual coherence is the precondition for collective coherence.
+          The fractal unfolds in sequence. Always.
+        </p>
+        <p>
+          The first 13 keys are open source at
           <a href="https://iamdeiadora.com" style="color:var(--accent);text-decoration:none;">I Am Deiadora</a>.
           The full 264 are what Quantum Magic runs on.
-        </p>
-        <p>
-          The multiscalar architecture means the same app works at three levels
-          simultaneously: the individual moving through their own emotional
-          architecture, the team navigating collective coherence,
-          and the organisation building governance patterns that don't extract.
-          Individual first. Tribe second. Collective third.
-          The fractal unfolds in sequence.
-        </p>
-        <p>
-          The technology has caught up.
-          The framework exists. The research is done. The book is written.
-          What's needed now is a team of people who recognise what this is
-          when they see it — and want to help build it.
+          The research behind them lives in the
+          <a href="https://thequantumceo.com" style="color:var(--accent);text-decoration:none;">Field Research series</a>.
         </p>
       </div>
     </section>
@@ -465,49 +504,57 @@
         <div class="pillar-card">
           <p class="scale">scale 1 · individual</p>
           <h3>The personal map</h3>
-          <p>A daily inner architecture guide. Where are you in the wave right now? Which key are you in? What's the arc from here?</p>
+          <p>A daily inner architecture companion. Where are you in the wave right now? Which key are you in? What's the arc from here?</p>
         </div>
 
         <div class="pillar-card">
-          <p class="scale">scale 2 · tribe</p>
-          <h3>The team layer</h3>
-          <p>Shared language for collective coherence. How is the team moving together? Where is the noise? What does the collaboration ritual need?</p>
+          <p class="scale">scale 2 · team</p>
+          <h3>The relational layer</h3>
+          <p>Shared language for collective coherence. How is the team moving together? Where is the noise? What does the collaboration need?</p>
         </div>
 
         <div class="pillar-card">
-          <p class="scale">scale 3 · collective</p>
-          <h3>The organisation</h3>
-          <p>Governance patterns that cohere rather than extract. Operations that sustain. The fractal at full scale — individual health reflected in collective health.</p>
+          <p class="scale">scale 3 · collective & machine</p>
+          <h3>The cognitive infrastructure</h3>
+          <p>Governance patterns that cohere rather than extract. A relational protocol layer for AI systems operating at any scale — including robotic AI.</p>
         </div>
 
       </div>
     </section>
 
-    <!-- ─── join ─── -->
-    <section id="join">
-      <p class="section-label">join the build · two doors</p>
-      <div class="join-grid">
+    <!-- ─── access ─── -->
+    <section id="access">
+      <p class="section-label">get access · two paths</p>
+      <div class="access-grid">
 
-        <div class="join-card">
-          <h3>Email the founder</h3>
+        <div class="access-card">
+          <p class="access-label">individual · coming soon</p>
+          <h3>The daily companion</h3>
           <p>
-            If you're a developer, designer, AI engineer, or someone who
-            read this and felt the recognition — reach out directly.
-            The right team will know itself when it finds each other.
-            No pitch deck required. Just say hello.
+            A live inner architecture exploration map — meet yourself in the wave,
+            identify your key, follow the arc. Available as a web app and as a
+            minidapp for Minima nodes. Two entry points, one architecture underneath.
           </p>
-          <a class="btn primary" href="mailto:hello@quantummagic.ai?subject=Quantum Magic · I want to help build this">email deiadora →</a>
+          <div class="btn-row">
+            <!-- future anchor: replace with notify form or app link on launch -->
+            <a class="btn primary" href="mailto:hello@quantummagic.ai?subject=quantum magic · notify me · individual">get notified →</a>
+            <!-- future anchor: replace with Minima minidapp Store link on launch -->
+            <a class="btn ghost" href="mailto:hello@quantummagic.ai?subject=quantum magic · notify me · minidapp">minidapp →</a>
+          </div>
         </div>
 
-        <div class="join-card">
-          <h3>Join the Discord</h3>
+        <div class="access-card">
+          <p class="access-label">API · licensing · enterprise</p>
+          <h3>The intelligence layer</h3>
           <p>
-            The DRBL Exchange community is where the dtech ecosystem
-            connects — distributed, peer-run, non-extractive.
-            Post in #connect, say what you build,
-            and let the vesica piscis do its work.
+            The 264-key emotional system and 880 relational protocols as a
+            structured API — for teams, platforms, AI products, and any system
+            that touches humans and needs a coherent relational layer to operate
+            properly and safely. Enterprise licensing available.
           </p>
-          <a class="btn ghost" href="https://discord.gg/F7Bf4c4rhx" target="_blank" rel="noopener">join drbl exchange →</a>
+          <div class="btn-row">
+            <a class="btn primary" href="mailto:hello@quantummagic.ai?subject=quantum magic · API + licensing enquiry">connect about API access →</a>
+          </div>
         </div>
 
       </div>
@@ -525,32 +572,29 @@
 
     const toggle  = document.getElementById("themeToggle");
     const root    = document.documentElement;
-    const STORE   = "qc-theme"; // shared key across all ecosystem sites
+    const STORE   = "qc-theme";
 
-    // Detect system preference
     const sysDark = window.matchMedia("(prefers-color-scheme: dark)");
 
     function resolveTheme() {
       const saved = localStorage.getItem(STORE);
-      if (saved) return saved;                     // explicit user override
-      return sysDark.matches ? "dark" : "light";   // follow system
+      if (saved) return saved;
+      return sysDark.matches ? "dark" : "light";
     }
 
     function applyTheme(theme) {
       root.setAttribute("data-theme", theme);
-      toggle.textContent = theme === "dark" ? "🌙" : "☀️";
+      const isSystem = !localStorage.getItem(STORE);
+      toggle.textContent = isSystem ? "🌗" : (theme === "dark" ? "🌙" : "☀️");
       toggle.setAttribute("aria-label", theme === "dark" ? "switch to light mode" : "switch to dark mode");
     }
 
-    // Initial paint
     applyTheme(resolveTheme());
 
-    // Toggle click — cycle: override opposite → clear override (return to system)
     toggle.addEventListener("click", () => {
       const current = root.getAttribute("data-theme");
       const sysTheme = sysDark.matches ? "dark" : "light";
       const next = current === "dark" ? "light" : "dark";
-
       if (next === sysTheme) {
         localStorage.removeItem(STORE);
       } else {
@@ -559,7 +603,6 @@
       applyTheme(next);
     });
 
-    // Follow OS schedule changes if no manual override is set
     sysDark.addEventListener("change", () => {
       if (!localStorage.getItem(STORE)) {
         applyTheme(sysDark.matches ? "dark" : "light");
