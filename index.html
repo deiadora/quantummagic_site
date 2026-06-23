@@ -73,6 +73,12 @@
     html { scroll-behavior: smooth; font-size: 16px; }
     body { font-family: var(--sans); background: var(--paper); color: var(--ink); line-height: 1.6; -webkit-font-smoothing: antialiased; transition: background .25s, color .25s; }
 
+    .launch-banner { background: var(--card-lt); border-bottom: 1px solid var(--line); padding: .55rem 2rem; display: flex; align-items: center; justify-content: center; gap: 1rem; font-size: .82rem; color: var(--muted); text-align: center; position: relative; }
+    .launch-banner a { color: var(--gold); text-decoration: none; font-weight: 500; }
+    .launch-banner a:hover { opacity: .75; }
+    .launch-banner-close { position: absolute; right: 1.2rem; background: none; border: none; cursor: pointer; color: var(--muted); font-size: 1.1rem; line-height: 1; transition: color .2s; padding: 0; }
+    .launch-banner-close:hover { color: var(--ink); }
+    
     /* nav */
     .nav {
       position: sticky; top: 0; z-index: 100;
@@ -169,6 +175,13 @@
 </head>
 <body>
 
+  <!-- COMING SOON BANNER — delete this block on launch -->
+  <div class="launch-banner">
+    <p>The individual app is in development — <a href="#access">get notified when it launches</a> · API access available soon</p>
+    <button class="launch-banner-close" onclick="this.parentElement.remove()" aria-label="dismiss">×</button>
+  </div>
+  <!-- END COMING SOON BANNER -->
+  
   <header class="nav">
     <a class="brand" href="/">quantum<span>magic</span></a>
     <nav class="navlinks">
