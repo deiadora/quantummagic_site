@@ -2,7 +2,7 @@
  
 The irreducible minimum. Four faces, nothing superfluous.
 Home of the 264 emotional arcs and the Quantum Magic platform.
-Dimension 3 of The Currency Playbook workshop — problem definition.
+Dimension 3 of The Currency Workshop — problem definition.
 
 ## part of the deiadora ecosystem
  
