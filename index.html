@@ -224,6 +224,16 @@ section { margin-top: 5rem; }
 }
 .case-card p { font-size: 1rem; color: var(--muted); line-height: 1.7; flex: 1; }
 .case-card .card-action { margin-top: auto; padding-top: .8rem; border-top: 1px solid var(--line); }
+.case-card blockquote {
+  font-family: var(--display); font-style: italic;
+  font-size: 1.15rem; color: var(--ink); line-height: 1.55;
+}
+.case-card .verdict { font-size: .95rem; color: var(--muted); line-height: 1.7; flex: 1; }
+.case-caption {
+  margin-top: 1.6rem; font-size: 1rem; color: var(--muted);
+  line-height: 1.75; max-width: 640px;
+}
+.case-caption strong { color: var(--ink); font-weight: 500; }
 
 /* ─── api section ─── */
 .code-label {
@@ -318,6 +328,7 @@ section { margin-top: 5rem; }
     <a class="brand" href="/">quantum<span>magic</span></a>
     <nav class="navlinks" aria-label="primary">
       <a href="#what">what it does</a>
+      <a href="#difference">the difference</a>
       <a href="#arc">one arc</a>
       <a href="#why-api">why an api</a>
       <a href="#access">access</a>
@@ -338,7 +349,7 @@ section { margin-top: 5rem; }
         <strong>Quantum Magic gives AI systems a structured map of the routes constructive conversations take</strong> — doubt opening into curiosity, curiosity settling into confidence — so the response can back the person's next step rather than close the exchange.
       </p>
       <p class="subhead">
-        No emotion detection. No simulated empathy. Just an accurate sense of where the conversation stands — and of what keeps it moving.
+        No emotion detection. No simulated empathy. Just an accurate sense of where the conversation stands — and of what keeps it moving. <strong>The point: interactions that get healthier — not flatter — as AI scales.</strong>
       </p>
       <div class="hero-cta">
         <a class="btn primary" href="mailto:herself@deiadora.com?subject=API access · quantummagic.ai">connect about API access</a>
@@ -369,6 +380,29 @@ section { margin-top: 5rem; }
       </div>
     </section>
 
+    <!-- ─── 2b · the difference ─── -->
+    <section id="difference" aria-labelledby="diff-label">
+      <p class="section-label" id="diff-label">same message · two responses</p>
+      <p class="section-intro">
+        A person opens with: <em>"I've been thinking about leaving my job. I don't know. Everyone says the market is terrible right now."</em>
+      </p>
+      <div class="case-grid">
+        <div class="case-card">
+          <p class="co">a standard response</p>
+          <blockquote>"That's a big decision. Here's a framework: assess your financial runway, update your materials, set a timeline …"</blockquote>
+          <p class="verdict">Closes the conversation. The doubt is still there — it just has homework now.</p>
+        </div>
+        <div class="case-card">
+          <p class="co">a pathway-aware response</p>
+          <blockquote>"It sounds like the doubt isn't really about the market. What's pulling at you about leaving?"</blockquote>
+          <p class="verdict">Keeps the movement available. The conversation can reach curiosity — and confidence is reachable from there.</p>
+        </div>
+      </div>
+      <p class="case-caption">
+        The second response isn't kinder, and it isn't therapy. <strong>It's informed by structure</strong>: knowing that doubt resolves constructively through curiosity — not through a delivered conclusion.
+      </p>
+    </section>
+
     <!-- ─── 3 · one arc ─── -->
     <section id="arc" aria-labelledby="arc-label">
       <p class="section-label" id="arc-label">the unit of the system</p>
@@ -385,6 +419,9 @@ section { margin-top: 5rem; }
   <span class="k">"response_guidance"</span>: "hold the question open; do not resolve"
 }</pre>
       <p class="section-intro" style="margin-top:2rem;">
+        Recognition runs on the <strong>markers</strong>: observable features of the language itself — hedged intent, externalized blockers — never inferred inner states. Every classification traces to something in the transcript you can point at, which is what makes <em>recognize</em> auditable and <em>evaluate</em> reproducible.
+      </p>
+      <p class="section-intro">
         There are 264 documented arcs. Each was observed repeatedly across thirteen years of field research — individuals, teams, organizations — before it was structured. The first 13 live openly at <a href="https://iamdeiadora.com" style="color:var(--gold);text-decoration:none;">iamdeiadora.com</a>; they're the same objects the API serves, and the fastest way to judge whether the mapping is real before you integrate anything.
       </p>
       <div class="negation">
@@ -476,7 +513,7 @@ section { margin-top: 5rem; }
     <section id="vision" class="vision" aria-labelledby="vision-label">
       <p class="section-label" id="vision-label">why it matters</p>
       <p>
-        Every day, AI systems sit inside millions of conversations that matter to the people having them. Give those systems a map of how such conversations progress, and they can keep the movement alive rather than end it early. <strong>The point of this work: interactions that get healthier — not flatter — as AI scales.</strong>
+        Every day, AI systems sit inside millions of conversations that matter to the people having them. Give those systems a map of how such conversations progress, and they can keep the movement alive rather than end it early. And a map held by software stays clean at scale — it absorbs no fear, claims no credit, and asks nothing back from the person moving. <strong>Healthier interactions, at the scale AI already operates — that's the point of this work.</strong>
       </p>
     </section>
 
